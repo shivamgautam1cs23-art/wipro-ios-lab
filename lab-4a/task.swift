@@ -17,3 +17,17 @@ enum TaskFilter {
     case pending
     case completed
 }
+
+import Foundation
+
+struct Task: Identifiable {
+    let id = UUID()
+    var title: String
+    var isCompleted: Bool = false
+}
+
+enum TaskFilter: String, CaseIterable {
+    case all = "All"
+    case pending = "Pending"
+    case completed = "Completed"
+}
